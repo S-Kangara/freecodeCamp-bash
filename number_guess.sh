@@ -4,6 +4,7 @@ PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 
 echo "Enter your username:"
 read USERNAME
+SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
 
 USER_ID=$($PSQL "SELECT user_id FROM users WHERE username='$USERNAME';")
 
