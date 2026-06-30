@@ -38,9 +38,9 @@ fi
 # -------------------------
 # GAME START
 # -------------------------
-SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
+SECRET_NUMBER=$(( RANDOM % 10 + 1 ))
 
-echo "Guess the secret number between 1 and 1000:"
+echo "Guess the secret number between 1 and 10:"
 read GUESS
 
 GUESS_COUNT=1
@@ -67,3 +67,5 @@ echo "You guessed it in $GUESS_COUNT tries. The secret number was $SECRET_NUMBER
 # SAVE GAME TO DATABASE
 # -------------------------
 INSERT_GAME=$($PSQL "INSERT INTO games(user_id, guesses) VALUES($USER_ID, $GUESS_COUNT);")
+
+# game completed successfully
