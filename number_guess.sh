@@ -38,9 +38,9 @@ fi
 # -------------------------
 # GAME START
 # -------------------------
-SECRET_NUMBER=$(( RANDOM % 10 + 1 ))
+SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
 
-echo "Guess the secret number between 1 and 10:"
+echo "Guess the secret number between 1 and 1000:"
 read GUESS
 
 GUESS_COUNT=1
